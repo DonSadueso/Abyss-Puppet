@@ -8,7 +8,9 @@ export default function View_Footer() {
         <div className='Footer_List_Services List'>
             <p>SERVICES</p>
             <ul>
-                <li>Lorem</li>
+                <a href='https://donsadueso.github.io/portafolio/'> 
+                  <li>Portafolio</li>
+                </a>
                 <li>Lorem ipsum</li>
                 <li>Lorem ipsum dolor</li>
                 <li>Lorem</li>
