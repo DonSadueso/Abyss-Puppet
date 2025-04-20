@@ -1,0 +1,149 @@
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+/* Fondo carrusel */
+.Container_Carrusel_Game {
+    height: 90vh;
+    background: linear-gradient(to top, rgb(4, 4, 46), #490505 100%);
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.Container_Carrusel_Game .Carrusel_Game_Title{
+    color: aliceblue;
+    font-size: 2rem;
+    position: absolute;
+    left: 35%;
+    top: -1%;
+    width: 70vh;
+    text-align: center;
+    font-weight: bold;
+}
+
+  /* Carrusel con flex centrado */
+.Container_Carrusel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    top: 20px;
+}
+  
+  /* Imagen general del carrusel */
+.Carrusel_img {
+    width: 90vw;
+    max-width: 600px;
+    height: 90%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+    transform: scale(0.95);
+    position: absolute;
+    overflow: hidden;
+}
+  
+  /* Imagen activa */
+.Carrusel_img.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.Carrusel_img.active:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.Carrusel_img .descripcion {
+    position: absolute;
+    bottom: 0;
+    left: 13px;
+    width: 96%;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-family: sans-serif;
+    font-size: 0.9em;
+}
+  
+.Carrusel_img.active:hover .descripcion {
+    opacity: 1;
+}
+
+  /* Botones */
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0 10px;
+}
+  
+.btn.prev {
+    left: 10px;
+}
+  
+.btn.next {
+    right: 10px;
+}
+  
+  /* Media queries para responsividad */
+@media (max-width: 768px) {
+    .Carrusel_img {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .Carrusel_img {
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 1201px) {
+    .Carrusel_img {
+        max-width: 600px;
+    }
+}
+  
+  /* Fondos de las imágenes */
+.Carrusel_img_1 {
+    background-image: url('../img/Little_Nightmare.jpeg');
+}
+  
+.Carrusel_img_2 {
+    background-image: url('../img/FNAF.jpeg');
+}
+
+.Carrusel_img_3 {
+    background-image: url('../img/REPO_Portada.avif');
+}
+
+.Carrusel_img_4 {
+    background-image: url('../img/Outlast.jpg');
+}
+
+.Carrusel_img_5 {
+    background-image: url('../img/Limbo.jpg');
+}
+
+.Carrusel_img_6 {
+    background-image: url('../img/Resident_Evil_7.jpg');
+}
